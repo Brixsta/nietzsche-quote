@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 40rem;
+  height: 25rem;
+  border: 5px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.portrait-circle {
+  width: 40rem;
+  height: 25rem;
+  background-image:url("https://www.thoughtco.com/thmb/oA_9kwhScjipG3siMqDThomrSrY=/1399x787/smart/filters:no_upscale()/nietzscheportrait-a6cfe34a104349e5b59991a1c94ea482.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 2rem 2rem 0px rgba(0,0,0,.1);
+}
+
+.quote-box {
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.app-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  margin: 1rem;
+}
+
+.quote {
+  animation-name: anim;
+  animation-duration: 4000ms;
+  animation-fill-mode: both;
+  animation-delay: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes anim {
+  0% {
+    
   }
-  to {
-    transform: rotate(360deg);
+  45% {
+    opacity: 1;
+  }
+  100% {
+    font-size: 3rem;
+    opacity: 0;
   }
 }
